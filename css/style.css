@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+margin: 0;
+}
+
+body {
+    color: white;
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 1.5;
+    background: var(--main-color);
+}
+
+:root {
+    --main-color: #1e202b;
+    --sec-color: #262936;
+    --custom-color: #009ad8;
+    --sec-font-color: #bfc1c8;
+    --font-family: 'Roboto', sans-serif;
+}
+
+/*navbar*/
+
+h1 {
+    font-size: 1.1rem;
+
+}
+
+.navbar .navbar-expand-lg {
+    padding: 50px 0;
+}
+
+.navbar-nav a.btn {
+    color: white;
+}
+
+small {
+    color: var(--sec-font-color);
+    font-size: 0.7142857143em;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--custom-color);
+    padding: 3px 25px;
+    border: 2px solid var(--custom-color);
+    font-weight: 400;
+    border-radius: 30px;
+}
+
+.navbar-nav li .nav-li {
+    padding: 3px 30px;
+    border: 2px solid transparent;
+    font-weight: 400;
+    border-radius: 30px;
+    transition: 0.5s ease;
+}
+
+/*search*/
+.search-section input,.footer input  {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+    background: var(--main-color);
+    color: white;
+    outline: none;
+}
+
+.search-section button.btn,.Subscribe-input button.btn{
+    background-color: var(--custom-color);
+    color: white;
+}
+
+.search-section input,.footer input::placeholder {
+    color:#898a8b;
+}
+
+.search-section {
+    position: relative;
+}
+
+.search-section .btn,
+.Subscribe-input .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 0 40px;
+}
+
+.site-header {
+    background-image: url(/images/banner.png);
+    background-size: cover;
+    padding: 70px 0;
+    min-height: 350px;
+}
+/*forecast*/
+sup {
+    top: -0.5em;
+}
+h2 {
+    font-size: 5rem;
+
+}
+.forecast-table .forecast-container {
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: -150px;
+    margin-bottom: 50px;
+}
+.weather-content  {
+ 
+    background-color: hsl(227, 18%, 21%);
+   
+}
+.today-info{
+    background-color: var(--sec-color);
+}
+.tom-info{
+    background-color: var(--main-color);
+}
+.weather-content .country-p {
+    font-size: 1.2857142857em;
+    font-weight: 400;
+    padding-top: 30px;
+    margin-bottom: 3px;
+}
+
+.weather-content .degree {
+    font-size:4.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+.tom-content {
+background-color:#272a39;
+}
+.status {
+    color: var(--custom-color);
+    font-size: 17px;
+}
+
+.status-icons {
+    padding-bottom: 30px;
+}
+
+.text-color {
+    color: var(--sec-font-color);
+}
+
+h3 {
+    font-size: 1.7142857143em;
+}
+
+
+h4 {
+    font-size: 1.1em;
+    color: var(--sec-font-color);
+}
+
+
+/*footer*/
+
+.footer{
+    background-color: var(--sec-color);
+}
+
+.copyright{
+    color: var(--sec-font-color);
+}
+
+.Subscribe-icons {
+    margin-left: 4rem;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    transition: all .5s;
+}
+.icon i{
+    color: var(--custom-color);
+    transition: all .5s;
+}
+
+
+
+/* h o v e r*/
+.icon:hover{
+    background-color: var(--custom-color);
+}
+.icon:hover i{
+    color: white;
+}
+.navbar-nav li:hover .nav-li,.nav-li a {
+    color: var(--custom-color);
+    border: 2px solid var(--custom-color);
+    
+}
+
+.Subscribe-icons .btn:hover.btn{
+    background-color: var(--custom-color);
+    color: white;
+}

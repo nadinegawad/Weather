@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- NAVBAR SECTION  -->
+
+  <nav>
+    <nav class="navbar navbar-expand-lg py-5 ">
+      <div class="container">
+        <div class="branding d-flex  align-items-center justify-content-between   ">
+          <img src="images/logo.png" alt="">
+          <div class="branding-caption px-3">
+            <h1 class="m-0 title ">Weather</h1>
+            <small>tagline goes here</small>
+          </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 ">
+            <li class=" active">
+              <a class="nav-link  active  home-li position-relative  btn " aria-current="page" href="">Home</a>
+            </li>
+            <li>
+              <a class="nav-link btn rounded-5 nav-li px-4" href="">News
+              </a>
+            </li>
+            <li>
+              <a class="nav-link  btn nav-li px-3" href="">Live cameras</a>
+            </li>
+            <li>
+              <a class="nav-link  btn nav-li px-3" href="">Photos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn nav-li px-3" href="">Contact</a>
+            </li>
+
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </nav>
+
+ <!-- search SECTION  -->
+  <div class="site-header ">
+    <div class="container">
+      <div class="search-section d-flex position-relative">
+        <input  type="text" class=" border-0 py-3 rounded-5 text-white" id="searchInput"
+          placeholder="Find your location...">
+        <button class=" btn  py-2 rounded-5">Find</button>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!--forecast ====================== -->
+  <div class="forecast-table  ">
+    <div class="container ">
+      <div class="row  mx-auto forecast-container g-0 ">
+        <div class="col-md-4 weather-content  ">
+          <div class="today-info py-2 d-flex justify-content-between align-items-center text-center head-color">
+            <p id="todoyName" class="m-0  px-2 text-color ">Monday</p>
+            <div class="d-flex">
+              <p id="todayNum" class="m-0 text-color"></p>
+              <p id="todaymonth" class="m-0 px-1 text-color"></p>
+            </div>
+          </div>
+          <div class="p-3">
+            <p id="countyName" class="country-p text-color"></p>
+            <div class=" d-flex align-items-center justify-content-between">
+              <div class="degree d-flex align-items-center ">
+                <h2 id="todayTemp"></h2>
+                <h2 ><sup>o</sup>c</h2>
+              </div>
+              <img id="todayIcon" src="" alt="">
+            </div>
+            <p id="todaySataus" class="status py-2"></p>
+            <div class="d-flex align-items-center status-icons pb-2">
+              <div class="d-flex text-center align-items-center justify-content-center ">
+                <img src="/images/icon-umberella.png" alt="">
+                <span id="todayHumidity" class="px-1 text-color"></span>
+              </div>
+              <div class="d-flex text-center align-items-center justify-content-center px-4">
+                <img src="/images/icon-wind.png" alt="">
+                <span id="todayWind" class="px-1 text-color"></span>
+              </div>
+              <div class="d-flex text-center align-items-center justify-content-center">
+                <img src="/images/icon-compass.png" alt="">
+                <span id="todaycompass" class="px-1 text-color"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ====== -->
+        <div class="col-md-4  tom-content ">
+          <div class=" py-2 tom-info text-center head-color mb-5">
+            <p id="nextDayName" class="m-0 text-color">Monday</p>
+          </div>
+          <div class=" text-center pb-3">
+            <img id="nextDayImg" class="mb-4 " src="" alt="">
+            <div class="d-flex align-items-center justify-content-center">
+              <h3 id="nextDayMaxTemp" class="mx-2"></h3>
+              <h3><sup>o</sup>c</h3>
+            </div>
+
+            <h4 id="nextDayMinTemp" class="mx-3 text-color">
+            </h4>
+            <p id="nextDayStatus" class="status text-center "></p>
+          </div>
+
+        </div>
+
+        <div class="col-md-4  weather-content ">
+          <div class=" py-2 tom-info text-center head-color mb-5">
+            <p id="afterNextDayName" class="m-0 text-color">Monday</p>
+          </div>
+          <div class=" text-center pb-3">
+            <img id="afterNextDayImg" class="mb-4 " src="" alt="">
+            <div class="d-flex align-items-center justify-content-center">
+              <h3 id="afterNextDayMaxTemp" class="mx-2"></h3>
+              <h3><sup>o</sup>c</h3>
+            </div>
+
+            <h4 id="afterNextDayMinTemp" class="mx-3 text-color">
+            </h4>
+            <p id="afterNextDayStatus" class="status text-center "></p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--footer  ====================== -->
+  <div class="footer py-5">
+    <div class="container ">
+      <div class="Subscribe-section d-flex align-items-center justify-content-between">
+        <div class="col-md-8">
+          <div class="Subscribe-input position-relative  ">
+            <input type="email" class="border-0 py-3 rounded-5" placeholder="Enter your email to subscribe...">
+            <button class=" btn py-2 px-3 rounded-5">Subscribe</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="Subscribe-icons  d-flex ">
+            <div class=" icon mx-1 d-flex rounded-circle align-items-center justify-content-center">
+              <a ><i class="fa-brands fa-facebook-f fs-5"></i></a>
+            </div>
+            <div class=" icon d-flex rounded-circle align-items-center justify-content-center">
+              <a ><i class="fa-brands fa-twitter fs-5"></i></a>
+            </div>
+            <div class=" icon mx-1 d-flex rounded-circle align-items-center justify-content-center">
+              <a ><i class="fa-brands fa-google-plus fs-5"></i></a>
+            </div>
+            <div class=" icon d-flex rounded-circle align-items-center justify-content-center">
+              <a ><i class="fa-brands fa-pinterest-p fs-5"></i></a>
+            </div>
+      
+          </div>
+        </div>
+
+      </div>
+      <p class="copyright pt-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+    </div>
+
+  </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
